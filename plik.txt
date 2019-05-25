@@ -1,0 +1,2 @@
+Kasy: 5
+Pracownicy: 10

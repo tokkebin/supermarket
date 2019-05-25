@@ -1,0 +1,75 @@
+# depslib dependency file v1.0
+1558552286 source:c:\users\magdalena\documents\github\supermarket_cb\main.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<chrono>
+
+1558385998 source:c:\users\magdalena\documents\github\supermarket_cb\src\check.cpp
+	"check.h"
+
+1558385998 c:\users\magdalena\documents\github\supermarket_cb\include\check.h
+	<payment.h>
+
+1558552713 c:\users\magdalena\documents\github\supermarket_cb\include\payment.h
+	<typeinfo>
+	<string>
+
+1558548464 source:c:\users\magdalena\documents\github\supermarket_cb\src\cashregister.cpp
+	"cashRegister.h"
+
+1558552765 c:\users\magdalena\documents\github\supermarket_cb\include\cashregister.h
+	<iostream>
+	<string>
+	"payment.h"
+
+1558386036 source:c:\users\magdalena\documents\github\supermarket_cb\src\invoice.cpp
+	"invoice.h"
+
+1558386036 c:\users\magdalena\documents\github\supermarket_cb\include\invoice.h
+	<payment.h>
+
+1558552695 source:c:\users\magdalena\documents\github\supermarket_cb\src\payment.cpp
+	"payment.h"
+
+1558536351 source:c:\users\magdalena\documents\github\supermarket_cb\src\productvat23.cpp
+	"productVAT23.h"
+
+1558536231 c:\users\magdalena\documents\github\supermarket_cb\include\productvat23.h
+	<product.h>
+
+1558549034 c:\users\magdalena\documents\github\supermarket_cb\include\product.h
+	<string>
+
+1558549250 source:c:\users\magdalena\documents\github\supermarket_cb\src\client.cpp
+	"client.h"
+
+1558552153 c:\users\magdalena\documents\github\supermarket_cb\include\client.h
+	"product.h"
+	"worker.h"
+
+1558552183 c:\users\magdalena\documents\github\supermarket_cb\include\worker.h
+	<string>
+	"product.h"
+
+1558549294 source:c:\users\magdalena\documents\github\supermarket_cb\src\product.cpp
+	"product.h"
+
+1558549459 source:c:\users\magdalena\documents\github\supermarket_cb\src\productvat8.cpp
+	"productVAT8.h"
+
+1558536217 c:\users\magdalena\documents\github\supermarket_cb\include\productvat8.h
+	<cstdlib>
+	<product.h>
+
+1558552172 source:c:\users\magdalena\documents\github\supermarket_cb\src\worker.cpp
+	"worker.h"
+
+1558552204 source:c:\users\magdalena\documents\github\supermarket_cb\src\supermarket.cpp
+	"supermarket.h"
+
+1558463616 c:\users\magdalena\documents\github\supermarket_cb\include\supermarket.h
+	"cashRegister.h"
+	"worker.h"
+	<vector>
+

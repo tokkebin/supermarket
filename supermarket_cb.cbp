@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="supermarket_cb" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/supermarket_cb" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/supermarket_cb" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/cashRegister.h" />
+		<Unit filename="include/check.h" />
+		<Unit filename="include/client.h" />
+		<Unit filename="include/invoice.h" />
+		<Unit filename="include/payment.h" />
+		<Unit filename="include/product.h" />
+		<Unit filename="include/productVAT23.h" />
+		<Unit filename="include/productVAT8.h" />
+		<Unit filename="include/simulation.h" />
+		<Unit filename="include/supermarket.h" />
+		<Unit filename="include/worker.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/cashRegister.cpp" />
+		<Unit filename="src/check.cpp" />
+		<Unit filename="src/client.cpp" />
+		<Unit filename="src/invoice.cpp" />
+		<Unit filename="src/payment.cpp" />
+		<Unit filename="src/product.cpp" />
+		<Unit filename="src/productVAT23.cpp" />
+		<Unit filename="src/productVAT8.cpp" />
+		<Unit filename="src/supermarket.cpp" />
+		<Unit filename="src/worker.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
