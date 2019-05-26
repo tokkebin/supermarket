@@ -9,7 +9,7 @@ class productVAT8 : public product
 {
     public:
         productVAT8();
-
+        productVAT8(int n, string nazwa, double p);
         //void setVAT();
         void setName(string n);
         void setPrice();

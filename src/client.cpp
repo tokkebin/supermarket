@@ -38,6 +38,24 @@ string client::askWorker(string what,product* p, worker* w)
 
 void client::toQueue(supermarket* market)
 {
+    int smallest = 100;
+    int smallestQueue;
+
+    for(int i=market.cashList.begin();i!=market.cashList.end();i++)
+    {
+        cashRegister temp = *i;
+        if(temp.getOpen())
+        {
+            if(temp.queueLength<smallest)
+            {
+                smallest = temp.queueLength;
+                smallestQueue = temp.getNumber();
+            }
+
+        }
+    }
+
+
 
 }
 

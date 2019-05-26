@@ -2,7 +2,10 @@
 #define CASHREGISTER_H
 #include <iostream>
 #include <string>
+#include <vector>
 #include "payment.h"
+#include "client.h"
+#include "worker.h"
 using namespace std;
 class cashRegister
 {

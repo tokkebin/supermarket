@@ -44,3 +44,18 @@ double worker::answerPrice(product* p)
 {
     return p->getPrice();
 }
+
+int worker::countProduct(vector<product>* v)
+{
+    return v.size();
+}
+
+void worker::setOpen(cashRegister* cash)
+{
+    cash.setOpen("open");
+}
+
+void worker::setClosed(cashRegister* cash)
+{
+    cash.setOpen("closed");
+}

@@ -1,8 +1,13 @@
 #ifndef WORKER_H
 #define WORKER_H
 #include <string>
-//#include "client.h"
+#include <vector>
+
+#include "cashRegister.h"
+#include "client.h"
 #include "product.h"
+
+
 using namespace std;
 
 class worker
@@ -16,6 +21,10 @@ class worker
         bool getBusy();
         string answer(string question);
         double answerPrice(product* p); //zdefiniowac cialo funkcji
+        int countProduct(vector<product>* v);
+        void setOpen(cashRegister* cash);
+        void setClosed(cashRegister* cash);
+
 
     protected:
 

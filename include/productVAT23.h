@@ -8,7 +8,7 @@ class productVAT23 : public product
 {
     public:
         productVAT23();
-        productVAT23(int n, string nazwa);
+        productVAT23(int n, string nazwa, double p); //konstruktor z parametrami
         void setName(string n);
         void setPrice();
         void setNumber(int i);
