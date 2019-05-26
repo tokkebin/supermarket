@@ -3,9 +3,9 @@
 #include <string>
 #include <vector>
 
-#include "worker.h"
+
 #include "supermarket.h"
-#include "cashRegister.h"
+
 using namespace std;
 class client
 {
