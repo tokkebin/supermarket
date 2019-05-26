@@ -2,7 +2,7 @@
 #define CLIENT_H
 #include <string>
 #include <vector>
-#include "product.h"
+
 #include "worker.h"
 #include "supermarket.h"
 #include "cashRegister.h"

@@ -3,6 +3,17 @@
 #include <fstream>
 #include <chrono>
 
+#include "cashRegister.h"
+#include "check.h"
+#include "client.h"
+#include "invoice.h"
+#include "payment.h"
+#include "product.h"
+#include "productVAT23.h"
+#include "productVAT8.h"
+#include "simulation.h"
+#include "supermarket.h"
+#include "worker.h"
 
 using namespace std;
 

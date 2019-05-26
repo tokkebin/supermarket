@@ -5,7 +5,6 @@
 #include <vector>
 #include "payment.h"
 #include "client.h"
-#include "worker.h"
 using namespace std;
 class cashRegister
 {
@@ -22,6 +21,7 @@ class cashRegister
         int getTotal();
 
         vector<client>* cashQueue;
+        void clientQueue(client* cl);
         int queueLength; //dlugosz kolejki do kasy
 
     protected:

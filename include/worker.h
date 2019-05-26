@@ -3,9 +3,12 @@
 #include <string>
 #include <vector>
 
-#include "cashRegister.h"
-#include "client.h"
+
 #include "product.h"
+#include "productVAT23.h"
+#include "productVAT8.h"
+#include "cashRegister.h"
+
 
 
 using namespace std;

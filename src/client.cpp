@@ -43,6 +43,7 @@ void client::toQueue(supermarket* market)
 
     for(int i=market.cashList.begin();i!=market.cashList.end();i++)
     {
+        //szukamy najmniejszej kolejki wsrod otwartych kas
         cashRegister temp = *i;
         if(temp.getOpen())
         {
@@ -54,7 +55,9 @@ void client::toQueue(supermarket* market)
 
         }
     }
+    //po znalezieniu stajemy w kolejce
 
+    market->cashList.begin()+(smallestQueue-1).clientQueue(this);
 
 
 }

@@ -1,9 +1,12 @@
 #ifndef SUPERMARKET_H
 #define SUPERMARKET_H
-#include "cashRegister.h"
+
 #include "worker.h"
-#include "product.h"
+
 #include <vector>
+#include <string>
+
+using namespace std;
 
 class supermarket
 {

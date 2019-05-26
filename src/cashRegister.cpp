@@ -55,3 +55,8 @@ int cashRegister::getTotal()
 {
     return this->total;
 }
+
+void cashRegister::clientQueue(client* cl)
+{
+    this->cashQueue.push_back(cl);
+}
