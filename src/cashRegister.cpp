@@ -32,7 +32,7 @@ void cashRegister::setOpen(string s)
     if(s == "open")
     {
         this->open = true;
-        this->cashQueue = 0;
+        this->queueLength = 0;
     }
 
     if(s == "closed")
@@ -56,7 +56,7 @@ int cashRegister::getTotal()
     return this->total;
 }
 
-void cashRegister::clientQueue(client* cl)
+/*void cashRegister::clientQueue(client* cl)
 {
     this->cashQueue.push_back(cl);
-}
+}*/

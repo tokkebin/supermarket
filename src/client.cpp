@@ -1,5 +1,5 @@
 #include "client.h"
-
+#include "cashRegister.h"
 client::client()
 {
     //ctor
@@ -39,30 +39,32 @@ string client::askWorker(string what,product* p, worker* w)
 void client::toQueue(supermarket* market)
 {
     int smallest = 100;
-    int smallestQueue;
+    cashRegister smallestQueue;
 
-    for(int i=market.cashList.begin();i!=market.cashList.end();i++)
+    vector<cashRegister>::iterator it;
+
+    for(it=market->cashList.begin();it!=market->cashList.end();it++)
     {
         //szukamy najmniejszej kolejki wsrod otwartych kas
-        cashRegister temp = *i;
+        cashRegister temp = *it;
         if(temp.getOpen())
         {
             if(temp.queueLength<smallest)
             {
                 smallest = temp.queueLength;
-                smallestQueue = temp.getNumber();
+                smallestQueue = *it;
             }
 
         }
     }
     //po znalezieniu stajemy w kolejce
 
-    market->cashList.begin()+(smallestQueue-1).clientQueue(this);
+    smallestQueue.cashQueue->push_back(*this);
 
 
 }
 
 double client::checkPrice(product* p)
 {
-    return p.getPrice();
+    return p->getPrice();
 }

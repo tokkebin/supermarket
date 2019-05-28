@@ -12,12 +12,12 @@ class productVAT8 : public product
         productVAT8(int n, string nazwa, double p);
         //void setVAT();
         void setName(string n);
-        void setPrice();
+        //void setPrice();
         void setNumber(int i);
         int getNumber();
         string getName();
-        double getPrice();
-        virtual ~productVAT8();
+        //double getPrice();
+        ~productVAT8();
 
     protected:
 

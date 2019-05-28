@@ -29,7 +29,7 @@ class supermarket
         void createBreads(int quantity);
         void createChocolates(int quantity);
 
-        vector<cashRegister>* cashList;
+        vector<cashRegister> cashList;
         vector<worker>* workerList;
 
         vector<productVAT8>* bottlesofWater;

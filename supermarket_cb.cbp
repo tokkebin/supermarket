@@ -34,6 +34,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename=".gitignore" />
 		<Unit filename="include/cashRegister.h" />
 		<Unit filename="include/check.h" />
 		<Unit filename="include/client.h" />

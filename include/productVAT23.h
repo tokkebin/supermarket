@@ -10,12 +10,12 @@ class productVAT23 : public product
         productVAT23();
         productVAT23(int n, string nazwa, double p); //konstruktor z parametrami
         void setName(string n);
-        void setPrice();
+        //void setPrice();
         void setNumber(int i);
         int getNumber();
         string getName();
-        double getPrice();
-        virtual ~productVAT23();
+        //double getPrice();
+        ~productVAT23();
 
     protected:
 

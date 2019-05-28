@@ -19,3 +19,23 @@ productVAT23::productVAT23(int n, string nazwa, double p)
     else
         this->price = p;
 }
+
+void productVAT23::setName(string n)
+{
+    this->name = n;
+}
+
+string productVAT23::getName()
+{
+    return this->name;
+}
+
+void productVAT23::setNumber(int i)
+{
+    this->number = i;
+}
+
+int productVAT23::getNumber()
+{
+    return this->number;
+}

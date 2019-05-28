@@ -7,13 +7,12 @@ class product
 {
     public:
         product();
-        virtual void setPrice();
-        virtual void setName()=0;
-        virtual double getPrice();
+        void setPrice();
+        virtual void setName(string n)=0;
+        double getPrice();
         virtual string getName()=0;
-        virtual void setNumber();
-        virtual int getNumber();
-        virtual void setVAT();
+        virtual void setNumber(int i)=0;
+        virtual int getNumber()=0;
         virtual ~product(){};
 
     protected:

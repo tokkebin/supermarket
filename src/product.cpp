@@ -5,8 +5,6 @@ product::product()
     //ctor
 }
 
-
-
 void product::setPrice()
 {
     int netto = (rand() % 50 ) + 7;
@@ -17,3 +15,5 @@ double product::getPrice()
 {
     return this->price;
 }
+
+//void product::

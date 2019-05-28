@@ -2,7 +2,7 @@
 
 productVAT8::productVAT8()
 {
-    setVAT();
+
     //ctor
 }
 
@@ -16,7 +16,7 @@ productVAT8::productVAT8(int n, string nazwa, double p)
     // konstruktor z parametrami
     //ustawiamy numer, nazwe i cene
     this->number = n;
-    this->name = nazwa;
+    setName(nazwa);
     if(p==0)
         setPrice();
     else
@@ -34,7 +34,12 @@ void productVAT8::setNumber(int i)
 }
 
 
-/*int productVAT8::getVAT()
+int productVAT8::getNumber()
 {
-    return this->VAT;
-}*/
+    return this->number;
+}
+
+string productVAT8::getName()
+{
+    return this->name;
+}

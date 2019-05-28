@@ -9,7 +9,7 @@ class payment
     public:
         virtual void set_payment()=0;
         virtual float get_payment()=0;
-        virtual string listProducts();
+        virtual string listProducts()=0;
         //virtual payment* choosePayment(payment* choose, typedef typ);
 
         payment();

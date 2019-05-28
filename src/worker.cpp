@@ -1,5 +1,5 @@
 #include "worker.h"
-
+#include "cashRegister.h"
 worker::worker()
 {
     //ctor
@@ -33,11 +33,7 @@ bool worker::getBusy()
 string worker::answer(string question)
 {
     string answer;
-    switch(question)
-    {
-    case "":
-        return answer="costam";
-    }
+
 }
 
 double worker::answerPrice(product* p)
@@ -47,15 +43,15 @@ double worker::answerPrice(product* p)
 
 int worker::countProduct(vector<product>* v)
 {
-    return v.size();
+    return v->size();
 }
 
 void worker::setOpen(cashRegister* cash)
 {
-    cash.setOpen("open");
+    cash->setOpen("open");
 }
 
 void worker::setClosed(cashRegister* cash)
 {
-    cash.setOpen("closed");
+    cash->setOpen("closed");
 }

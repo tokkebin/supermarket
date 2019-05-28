@@ -7,12 +7,12 @@
 #include "product.h"
 #include "productVAT23.h"
 #include "productVAT8.h"
-#include "cashRegister.h"
+//#include "cashRegister.h"
 
 
 
 using namespace std;
-
+class cashRegister;
 class worker
 {
     public:
