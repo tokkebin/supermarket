@@ -1,26 +1,31 @@
 #include "client.h"
 #include "cashRegister.h"
-client::client()
+Client::Client()
 {
     //ctor
 }
 
-client::~client()
+Client::Client(int i)
+{
+    this->setNumber(i);
+}
+
+Client::~Client()
 {
     //dtor
 }
 
-void client::setNumber(int i)
+void Client::setNumber(int i)
 {
     this->number = i;
 }
 
-int client::getNumber()
+int Client::getNumber()
 {
     return this->number;
 }
 
-bool client::entrence(string inout)
+bool Client::entrence(string inout)
 {
     if(inout == "in")
         return true;
@@ -28,7 +33,7 @@ bool client::entrence(string inout)
         return false;
 }
 
-string client::askWorker(string what,product* p, worker* w)
+string Client::askWorker(string what,Product* p, Worker* w)
 {
     if(what == "price")
         return  to_string( w->answerPrice(p));
@@ -36,7 +41,7 @@ string client::askWorker(string what,product* p, worker* w)
         return w->answer(what);
 }
 
-void client::toQueue(supermarket* market)
+void Client::toQueue(Supermarket* market)
 {
     int smallest = 100;
     cashRegister smallestQueue;
@@ -64,7 +69,12 @@ void client::toQueue(supermarket* market)
 
 }
 
-double client::checkPrice(product* p)
+double Client::checkPrice(Product* p)
 {
     return p->getPrice();
+}
+
+void Client::toBasket(Product* p)
+{
+    //this->basket.push_back(*p);
 }

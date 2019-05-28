@@ -3,20 +3,20 @@
 
 #include <string>
 using namespace std;
-class product
+class Product
 {
     public:
-        product();
+        Product();
         void setPrice();
         virtual void setName(string n)=0;
         double getPrice();
         virtual string getName()=0;
         virtual void setNumber(int i)=0;
         virtual int getNumber()=0;
-        virtual ~product(){};
+        virtual ~Product(){};
 
     protected:
-
+        double valueVAT;
     private:
         int VAT;
         double price;

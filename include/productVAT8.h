@@ -5,7 +5,7 @@
 
 using namespace std;
 
-class productVAT8 : public product
+class productVAT8 : public Product
 {
     public:
         productVAT8();

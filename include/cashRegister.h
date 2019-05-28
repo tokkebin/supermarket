@@ -16,11 +16,11 @@ class cashRegister
         void setNumber(int i);
         void setOpen(string s);
         bool getOpen();
-        //payment choosePayment(payment& pay);
+        string givePayment(payment& pay);
         void countCost(int price);
         int getTotal();
 
-        vector<client>* cashQueue;
+        vector<Client>* cashQueue;
         //void clientQueue(client* cl);
         int queueLength; //dlugosz kolejki do kasy
 

@@ -7,10 +7,10 @@ using namespace std;
 class payment
 {
     public:
-        virtual void set_payment()=0;
-        virtual float get_payment()=0;
-        virtual string listProducts()=0;
-        //virtual payment* choosePayment(payment* choose, typedef typ);
+        void set_payment();
+        float get_payment();
+        string listProducts();
+
 
         payment();
         virtual ~payment();

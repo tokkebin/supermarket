@@ -2,20 +2,22 @@
 #define SUPERMARKET_H
 
 #include "worker.h"
+//#include "client.h"
 
 #include <vector>
 #include <string>
 
 using namespace std;
 
-class supermarket
+class Supermarket
 {
     public:
-        supermarket();
-        ~supermarket();
+        Supermarket();
+        ~Supermarket();
 
-        supermarket(int cash, int worker);
-        bool entrance();//otwieranie lub zamykanie sklepu
+        Supermarket(int cash, int worker);
+        bool entrance();//zwraca otwarty lub zamkniety sklep
+        void close();//zmykanie sklepu
 
         void createCash(int n);//tworzymy liste n kas
         void createWorker(int m); //tworzymy liste m pracownikow
@@ -30,20 +32,23 @@ class supermarket
         void createChocolates(int quantity);
 
         vector<cashRegister> cashList;
-        vector<worker>* workerList;
+        vector<Worker> workerList;
 
-        vector<productVAT8>* bottlesofWater;
-        vector<productVAT8>* apples;
-        vector<productVAT8>* flowers;
+        vector<productVAT8> bottlesofWater;
+        vector<productVAT8> apples;
+        vector<productVAT8> flowers;
 
-        vector<productVAT23>* newspapers;
-        vector<productVAT23>* books;
-        vector<productVAT23>* bread;
-        vector<productVAT23>* chocolate;
+        vector<productVAT23> newspapers;
+        vector<productVAT23> books;
+        vector<productVAT23> bread;
+        vector<productVAT23> chocolate;
+
+        string akcja;
 
     protected:
 
     private:
+        bool enter;
 
 };
 

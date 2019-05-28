@@ -1,16 +1,16 @@
 #include "supermarket.h"
 #include "cashRegister.h"
-supermarket::supermarket()
+Supermarket::Supermarket()
 {
     //ctor
 }
 
-supermarket::~supermarket()
+Supermarket::~Supermarket()
 {
     //dtor
 }
 
-supermarket::supermarket(int n,int m)
+Supermarket::Supermarket(int n,int m)
 {
     createCash(n);
     createWorker(m);
@@ -20,10 +20,13 @@ supermarket::supermarket(int n,int m)
     createBreads(10);
     createChocolates(10);
     createFlowers(10);
-    //createNewspapers(10);
+    createNewspapers(10);
+
+    enter = true;
+    cout<<"Otwarto sklep"<<endl;
 }
 
-void supermarket::createCash(int n)
+void Supermarket::createCash(int n)
 {
     for (int i=0;i<n;i++)
     {
@@ -31,84 +34,109 @@ void supermarket::createCash(int n)
         this->cashList.push_back(*cash);
         //tworzymy nowa kase i dodajemy do vectora
     }
+    string text = "stworzono " + to_string(n) + " kas\n";
+    cout<<text;
+    this->akcja.append(text);
 }
 
 
-void supermarket::createWorker(int m)
+void Supermarket::createWorker(int m)
 {
     for(int i=0;i<m;i++)
     {
-        worker* wor = new worker();
-        this->workerList->push_back(*wor);
+        Worker* wor = new Worker();
+        this->workerList.push_back(*wor);
         //tworzymy nowego pracownika i dodajemy do wektora
     }
+
+
+    string text = "stworzono " + to_string(m) + " pracownikow\n";
+    cout<<text;
+    this->akcja.append(text);
 }
 
-void supermarket::createBottles(int quantity)
+void Supermarket::createBottles(int quantity)
 {
     for(int i=1;i<=quantity;i++)
     {
         productVAT8* bottleofWater = new productVAT8(i, "butelka wody", 3.5 );
-        this->bottlesofWater->push_back(*bottleofWater);
+        this->bottlesofWater.push_back(*bottleofWater);
         //tworzymy butelke wody i dodajemy do vectora
     }
+    cout<<"stworzono "<<quantity<<" butelek"<<endl;
 }
 
-void supermarket::createApples(int quantity)
+void Supermarket::createApples(int quantity)
 {
     for(int i=1;i<=quantity;i++)
     {
         productVAT8* apple = new productVAT8(i, "jablko", 0.5);
-        this->apples->push_back(*apple);
+        this->apples.push_back(*apple);
         //tworzymy jablko i dodajemy do vectora
     }
+    cout<<"stworzono "<<quantity<<" jablek"<<endl;
 }
 
-void supermarket::createFlowers(int quantity)
+void Supermarket::createFlowers(int quantity)
 {
     for(int i=1; i<=quantity; i++)
     {
         productVAT8* flower = new productVAT8(i, "bukiet kwiatow", 5.0);
-        this->flowers->push_back(*flower);
+        this->flowers.push_back(*flower);
         //tworzymy bukiet kwiatow i dodajemy do vectora
     }
+    cout<<"stworzono "<<quantity<<" bukietow kwiatow"<<endl;
 }
 
-void supermarket::createBooks(int quantity)
+void Supermarket::createBooks(int quantity)
 {
     for(int i=1; i<=quantity; i++)
     {
         productVAT23* book = new productVAT23(i, "ksiazka", 0);
-        this->books->push_back(*book);
+        this->books.push_back(*book);
         //tworzymy ksiazke i dodajemy do vectora
     }
+    cout<<"stworzono "<<quantity<<" ksiazek"<<endl;
 }
 
-void supermarket::createBreads(int quantity)
+void Supermarket::createBreads(int quantity)
 {
     for(int i=1; i<=quantity; i++)
     {
         productVAT23* br = new productVAT23(i, "bochenek chleba", 2.5);
-        this->bread->push_back(*br);
+        this->bread.push_back(*br);
         //tworzymy bochenek chleba i dodajemy do vectora
     }
+    cout<<"stworzono "<<quantity<<" bochenkow"<<endl;
 }
 
-void supermarket::createChocolates(int quantity)
+void Supermarket::createChocolates(int quantity)
 {
     for(int i=1; i<=quantity; i++)
     {
         productVAT23* choco = new productVAT23(i, "tabliczka czekolady", 3.5);
-        this->chocolate->push_back(*choco);
+        this->chocolate.push_back(*choco);
         //tworzymy czekolade i dodajemy do vectora
     }
+    cout<<"stworzono "<<quantity<<" czekolad"<<endl;
 }
 
-void supermarket::createNewspapers(int quantiy)
+void Supermarket::createNewspapers(int quantity)
 {
-    for(int i=1; i<=quantiy; i++)
+    for(int i=1; i<=quantity; i++)
     {
         productVAT23* news = new productVAT23(i, "gazeta", 4.9);
-        this->newspapers->push_back(*news);
+        this->newspapers.push_back(*news);
     }
+    cout<<"stworzono "<<quantity<<" gazet"<<endl;
+}
+
+bool Supermarket::entrance()
+{
+    return this->enter;
+}
+
+void Supermarket::close()
+{
+    this->enter = false;
 }

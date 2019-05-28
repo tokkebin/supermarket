@@ -1,17 +1,18 @@
 #include "product.h"
 
-product::product()
+Product::Product()
 {
     //ctor
 }
 
-void product::setPrice()
+void Product::setPrice()
 {
     int netto = (rand() % 50 ) + 7;
+    this->valueVAT = netto*(this->VAT)/100;
     this->price = double(netto) + (netto*(this->VAT)/100);
 }
 
-double product::getPrice()
+double Product::getPrice()
 {
     return this->price;
 }

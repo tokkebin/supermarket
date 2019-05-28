@@ -7,19 +7,21 @@
 #include "supermarket.h"
 
 using namespace std;
-class client
+class Client
 {
     public:
-        client();
+        Client();
+        Client(int i);
         void setNumber(int i);
         int getNumber();
-        string askWorker(string what,product* p,worker* w);
-        double checkPrice(product* p);
+        string askWorker(string what,Product* p,Worker* w);
+        double checkPrice(Product* p);
         bool entrence(string inout);
-        product* choose();
-        void toQueue(supermarket* market);
-        vector<product>* basket;
-        ~client();
+        Product* choose();
+        void toQueue(Supermarket* market);
+        void toBasket(Product* pr);
+        vector<Product>* basket;
+        ~Client();
 
     protected:
 

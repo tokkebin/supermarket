@@ -40,13 +40,15 @@ int main()
             plik.close();
         }
 
-        for(int i=0;i<2;i++)
-        {
-            cout<<all[i][0]<<"  "<<all[i][1]<<endl;
-        }
+    for(int i=0;i<2;i++)
+    {
+        cout<<all[i][0]<<"  "<<all[i][1]<<endl;
+    }
 
-        int m = stoi(all[0][1]); //liczba kas
-        int n = stoi(all[1][1]); //liczba pracownikow
+    int m = stoi(all[0][1]); //liczba kas
+    int n = stoi(all[1][1]); //liczba pracownikow
+
+    simulation(2,n,m,1,1,1);
 
     return 0;
 }

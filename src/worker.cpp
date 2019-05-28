@@ -1,57 +1,63 @@
 #include "worker.h"
 #include "cashRegister.h"
-worker::worker()
+#include "supermarket.h"
+Worker::Worker()
 {
     //ctor
 }
 
-worker::~worker()
+Worker::~Worker()
 {
     //dtor
 }
 
-void worker::set_number(int a)
+void Worker::set_number(int a)
 {
     this->number = a;
 }
 
-int worker::get_number()
+int Worker::get_number()
 {
     return this->number;
 }
 
-void worker::setBusy(bool i)
+void Worker::setBusy(bool i)
 {
     this->busy = i;
 }
 
-bool worker::getBusy()
+bool Worker::getBusy()
 {
     return this->busy;
 }
 
-string worker::answer(string question)
+string Worker::answer(string question)
 {
     string answer;
 
 }
 
-double worker::answerPrice(product* p)
+double Worker::answerPrice(Product* p)
 {
     return p->getPrice();
 }
 
-int worker::countProduct(vector<product>* v)
+int Worker::countProduct(vector<Product>* v)
 {
     return v->size();
 }
 
-void worker::setOpen(cashRegister* cash)
+void Worker::setOpen(cashRegister* cash)
 {
     cash->setOpen("open");
 }
 
-void worker::setClosed(cashRegister* cash)
+void Worker::setClosed(cashRegister* cash)
 {
     cash->setOpen("closed");
+}
+
+void Worker::closeMarket(Supermarket* market)
+{
+    market->close();
 }

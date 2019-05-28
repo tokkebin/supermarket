@@ -18,6 +18,7 @@ productVAT23::productVAT23(int n, string nazwa, double p)
         setPrice();
     else
         this->price = p;
+        this->valueVAT = p*(this->VAT)/(100+this->VAT);
 }
 
 void productVAT23::setName(string n)

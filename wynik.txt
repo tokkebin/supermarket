@@ -1,0 +1,39 @@
+Symulacja supermarketu
+
+stworzono 10 kas
+stworzono 5 pracownikow
+
+Klient wszedl do sklepu
+
+
+Klient wszedl do sklepu
+
+Symulacja supermarketu
+
+stworzono 10 kas
+stworzono 5 pracownikow
+
+Klient wszedl do sklepu
+
+klient wybral jablko
+klient wybral jablko
+
+Klient wszedl do sklepu
+
+klient wybral wode
+Symulacja supermarketu
+
+stworzono 10 kas
+stworzono 5 pracownikow
+
+Klient wszedl do sklepu
+
+klient wybral jablko
+
+Klient wszedl do sklepu
+
+klient wybral wode
+Symulacja supermarketu
+
+Symulacja supermarketu
+

@@ -4,7 +4,7 @@
 #include <product.h>
 
 
-class productVAT23 : public product
+class productVAT23 : public Product
 {
     public:
         productVAT23();
