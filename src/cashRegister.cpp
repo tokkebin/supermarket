@@ -56,6 +56,33 @@ int cashRegister::getTotal()
     return this->total;
 }
 
+string createPayment(payment* pay, Client* cl)
+{
+    //stworzymy potwierdzenie zaplaty o wybranej formie dla danego klienta
+    pay->listProducts = cl->basket;
+    vector<Product>::iterator it;
+    for(it=pay->listProducts->begin();it!= pay->listProducts->end();it++)
+    {
+        //a tutaj liczymy w petli cene do zaplaty
+        //oraz caly vat
+    }
+
+    if(typeid(pay)==typeid(Invoice))
+    {
+        string nazwa = pay->getName();
+        return nazwa;
+    }
+    else if(typeid(pay)==typeid(Check))
+    {
+        string nazwa = pay->getName();
+        return nazwa;
+    }
+    else
+        throw "ZLY TYP";
+
+
+}
+
 /*void cashRegister::clientQueue(client* cl)
 {
     this->cashQueue.push_back(cl);

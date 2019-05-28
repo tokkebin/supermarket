@@ -3,13 +3,16 @@
 
 #include <typeinfo>
 #include <string>
+#include <vector>
+#include "product.h"
 using namespace std;
 class payment
 {
     public:
-        void set_payment();
-        float get_payment();
-        string listProducts();
+        void setPayment();
+        float getPayment();
+        vector<Product>* listProducts;
+        virtual string getName()=0;
 
 
         payment();

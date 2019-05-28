@@ -3,7 +3,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "payment.h"
+#include "check.h"
+#include "invoice.h"
 #include "client.h"
 using namespace std;
 class cashRegister
@@ -16,7 +17,7 @@ class cashRegister
         void setNumber(int i);
         void setOpen(string s);
         bool getOpen();
-        string givePayment(payment& pay);
+        string createPayment(payment& pay, Client* cl);//stworzymy potwierdzenie zaplaty o wybranej formie dla danego klienta
         void countCost(int price);
         int getTotal();
 

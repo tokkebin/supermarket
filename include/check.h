@@ -4,15 +4,17 @@
 #include <payment.h>
 
 
-class check : public payment
+class Check : public payment
 {
     public:
-        check();
-        ~check();
+        Check();
+        string getName();
+        ~Check();
 
     protected:
 
     private:
+        string name = "PARAGON";
 };
 
 #endif // CHECK_H

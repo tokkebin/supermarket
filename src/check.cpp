@@ -1,11 +1,15 @@
 #include "check.h"
 
-check::check()
+Check::Check()
 {
     //ctor
 }
 
-check::~check()
+Check::~Check()
 {
     //dtor
+}
+string Check::getName()
+{
+    return this->name;
 }

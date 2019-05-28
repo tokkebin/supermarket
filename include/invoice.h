@@ -4,15 +4,18 @@
 #include <payment.h>
 
 
-class invoice : public payment
+class Invoice : public payment
 {
     public:
-        invoice();
-        ~invoice();
+        Invoice();
+        double getVAT();
+        string getName();
+        ~Invoice();
 
     protected:
 
     private:
+        string name = "FAKTURA";
 };
 
 #endif // INVOICE_H
