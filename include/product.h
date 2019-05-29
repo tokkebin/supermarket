@@ -8,13 +8,13 @@ class Product
     public:
         Product();
         void setPrice();
-        virtual void setName(string n)=0;
+        virtual void setName(string n){};
         double getPrice();
         void setValueVAT();
         double getValueVAT();
-        virtual string getName()=0;
-        virtual void setNumber(int i)=0;
-        virtual int getNumber()=0;
+        virtual string getName(){};
+        virtual void setNumber(int i){};
+        virtual int getNumber(){};
         virtual ~Product(){};
 
     protected:

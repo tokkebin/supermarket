@@ -96,13 +96,13 @@
 1559126038 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\check.h
 	<payment.h>
 
-1559131249 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\payment.h
+1559154305 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\payment.h
 	<typeinfo>
 	<string>
 	<vector>
 	"product.h"
 
-1559089052 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\invoice.cpp
+1559131227 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\invoice.cpp
 	"invoice.h"
 
 1559131207 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\invoice.h
@@ -114,7 +114,7 @@
 1559129873 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\product.cpp
 	"product.h"
 
-1559129849 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\product.h
+1559132853 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\product.h
 	<string>
 
 1559086945 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\productvat23.cpp
@@ -130,18 +130,20 @@
 	<cstdlib>
 	<product.h>
 
-1558959986 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\cashregister.cpp
+1559154353 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\cashregister.cpp
 	"cashRegister.h"
 
-1559130181 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\cashregister.h
+1559154236 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\cashregister.h
 	<iostream>
 	<string>
 	<vector>
+	<chrono>
+	<thread>
 	"check.h"
 	"invoice.h"
 	"client.h"
 
-1559085403 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\client.h
+1559154155 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\client.h
 	<string>
 	<vector>
 	"supermarket.h"
@@ -163,11 +165,11 @@
 	"cashRegister.h"
 	"supermarket.h"
 
-1559085376 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\client.cpp
+1559154359 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\client.cpp
 	"client.h"
 	"cashRegister.h"
 
-1559128822 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\simulation.h
+1559162082 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\simulation.h
 	<iostream>
 	<sstream>
 	<string>

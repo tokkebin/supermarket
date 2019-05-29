@@ -19,8 +19,8 @@ class Client
         bool entrence(string inout);
         Product* choose();
         void toQueue(Supermarket* market);
-        void toBasket(Product* pr);
-        vector<Product>* basket;
+        void toBasket(Product& pr);
+        vector<Product> basket;
         ~Client();
 
     protected:

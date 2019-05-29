@@ -30,7 +30,7 @@ void Supermarket::createCash(int n)
 {
     for (int i=0;i<n;i++)
     {
-        cashRegister* cash = new cashRegister(i);
+        cashRegister* cash = new cashRegister(i+1);
         this->cashList.push_back(*cash);
         //tworzymy nowa kase i dodajemy do vectora
     }
@@ -45,6 +45,7 @@ void Supermarket::createWorker(int m)
     for(int i=0;i<m;i++)
     {
         Worker* wor = new Worker();
+        wor->set_number(i+1);
         this->workerList.push_back(*wor);
         //tworzymy nowego pracownika i dodajemy do wektora
     }

@@ -3,24 +3,17 @@ Symulacja supermarketu
 stworzono 10 kas
 stworzono 5 pracownikow
 
-Klient wszedl do sklepu
+Klient nr: 0 wszedl do sklepu
 
-klient wybral jablko
+klient wybral gazete
+klient wybral chleb
 
-Klient wszedl do sklepu
+Kasa nr: 0zostala otwarta przez pracownika nr: 9311272
 
-klient wybral wode
-Symulacja supermarketu
+Klient nr: 1 wszedl do sklepu
 
-Symulacja supermarketu
+klient wybral wode klient wybral kwiaty
 
-Symulacja supermarketu
-
-Symulacja supermarketu
-
-Symulacja supermarketu
-
-Symulacja supermarketu
-
+Kasa nr: 1zostala otwarta przez pracownika nr: 9311272
 Symulacja supermarketu
 

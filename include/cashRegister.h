@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <chrono>
+#include <thread>
 #include "check.h"
 #include "invoice.h"
 #include "client.h"
@@ -21,7 +23,7 @@ class cashRegister
         void countCost(double price);
         void countVAT(Product& p);
         double getTotal();
-        string createPayment(Payment& pay, Client* cl);//stworzymy potwierdzenie zaplaty o wybranej formie dla danego klienta
+        string createPayment(Payment& pay, Client& cl);//stworzymy potwierdzenie zaplaty o wybranej formie dla danego klienta
 
 
         vector<Client>* cashQueue;

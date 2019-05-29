@@ -74,7 +74,7 @@ double Client::checkPrice(Product* p)
     return p->getPrice();
 }
 
-void Client::toBasket(Product* p)
+void Client::toBasket(Product& p)
 {
-    //this->basket.push_back(*p);
+    this->basket.push_back(p);
 }

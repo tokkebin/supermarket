@@ -65,12 +65,19 @@ double cashRegister::getPriceVAT()
 {
     return this->priceVAT;
 }
-string cashRegister::createPayment(Payment& pay, Client* cl)
+string cashRegister::createPayment(Payment& pay, Client& cl)
 {
     //stworzymy potwierdzenie zaplaty o wybranej formie dla danego klienta
-    pay.listProducts = cl->basket;
+    //po kazdym wypisaniu akcji na konsole czekamy az uzytkownik przeczyta
+    pay.listProducts = (cl.basket);
     vector<Product>::iterator it;
-    for(it=pay.listProducts->begin();it!= pay.listProducts->end();it++)
+    string nazwa;
+
+    nazwa = "\nKlient nr: " + to_string(cl.getNumber()) + "kupil:\n";
+    cout<<nazwa;
+    this_thread::sleep_for(std::chrono::seconds(1));
+    //wypisanie listy kupionych produktow i policzenie ceny
+    for(it=pay.listProducts.begin();it!= pay.listProducts.end();it++)
     {
         Product& temp = *it;
 
@@ -79,19 +86,30 @@ string cashRegister::createPayment(Payment& pay, Client* cl)
         //oraz caly vat
         this->countVAT(temp);
 
+        string text = temp.getName() + " nr: " + to_string(temp.getNumber());
+        nazwa.append(text);
+        cout<<text;
+        this_thread::sleep_for(std::chrono::seconds(1));
+
     }
-    string nazwa = "Klient nr " + to_string(cl->getNumber()) + " wybral " + pay.getName();
+    string nazwaAdd = "\nKlient nr " + to_string(cl.getNumber()) + " wybral " + pay.getName();
+    nazwa.append(nazwaAdd);
+    this_thread::sleep_for(std::chrono::seconds(2));
 
     if(typeid(pay)==typeid(Invoice))
     {
         string addition = " nr: "+ to_string(pay.getNumber()) +"\nDo zaplaty: " + to_string(this->getTotal()) + " w tym "+ to_string(this->getPriceVAT()) + " VAT\n";
         nazwa.append(addition);
+        cout<<addition;
+        this_thread::sleep_for(std::chrono::seconds(2));
         return nazwa;
     }
     else if(typeid(pay)==typeid(Check))
     {
         string addition = "\nDo zaplaty: " + to_string(this->getTotal()) + "\n";
         nazwa.append(addition);
+        cout<<addition;
+        this_thread::sleep_for(std::chrono::seconds(2));
         return nazwa;
     }
     else
