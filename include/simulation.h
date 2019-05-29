@@ -29,6 +29,8 @@ Client* clientEntrence(Supermarket* market)
 
 string clientChoose()
 {
+    //funkcja uzywa generatora liczb pseudolosowych do wyboru produktu
+    //dla liczb od 1  do 7 przypisane sa produkty
     string wynik;
     int last = rand()%100;
     int first = 1;

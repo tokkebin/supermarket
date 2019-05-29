@@ -17,9 +17,12 @@ class cashRegister
         void setNumber(int i);
         void setOpen(string s);
         bool getOpen();
-        string createPayment(payment& pay, Client* cl);//stworzymy potwierdzenie zaplaty o wybranej formie dla danego klienta
-        void countCost(int price);
-        int getTotal();
+        double getPriceVAT();
+        void countCost(double price);
+        void countVAT(Product& p);
+        double getTotal();
+        string createPayment(Payment& pay, Client* cl);//stworzymy potwierdzenie zaplaty o wybranej formie dla danego klienta
+
 
         vector<Client>* cashQueue;
         //void clientQueue(client* cl);
@@ -30,7 +33,8 @@ class cashRegister
     private:
         int number;
         bool open;
-        int total; //cena do zaplaty
+        double total; //cena do zaplaty
+        double priceVAT;
 };
 
 #endif // CASHREGISTER_H

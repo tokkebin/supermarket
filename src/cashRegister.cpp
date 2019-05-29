@@ -46,35 +46,52 @@ bool cashRegister::getOpen()
     return this->open;
 }
 
-void cashRegister::countCost(int price)
+void cashRegister::countCost(double price)
 {
     this->total = this->total + price;
 }
 
-int cashRegister::getTotal()
+double cashRegister::getTotal()
 {
     return this->total;
 }
 
-string createPayment(payment* pay, Client* cl)
+void cashRegister::countVAT(Product& p)
+{
+    this->priceVAT = this->priceVAT + p.getValueVAT();
+}
+
+double cashRegister::getPriceVAT()
+{
+    return this->priceVAT;
+}
+string cashRegister::createPayment(Payment& pay, Client* cl)
 {
     //stworzymy potwierdzenie zaplaty o wybranej formie dla danego klienta
-    pay->listProducts = cl->basket;
+    pay.listProducts = cl->basket;
     vector<Product>::iterator it;
-    for(it=pay->listProducts->begin();it!= pay->listProducts->end();it++)
+    for(it=pay.listProducts->begin();it!= pay.listProducts->end();it++)
     {
+        Product& temp = *it;
+
+        this->countCost(temp.getPrice());
         //a tutaj liczymy w petli cene do zaplaty
         //oraz caly vat
+        this->countVAT(temp);
+
     }
+    string nazwa = "Klient nr " + to_string(cl->getNumber()) + " wybral " + pay.getName();
 
     if(typeid(pay)==typeid(Invoice))
     {
-        string nazwa = pay->getName();
+        string addition = " nr: "+ to_string(pay.getNumber()) +"\nDo zaplaty: " + to_string(this->getTotal()) + " w tym "+ to_string(this->getPriceVAT()) + " VAT\n";
+        nazwa.append(addition);
         return nazwa;
     }
     else if(typeid(pay)==typeid(Check))
     {
-        string nazwa = pay->getName();
+        string addition = "\nDo zaplaty: " + to_string(this->getTotal()) + "\n";
+        nazwa.append(addition);
         return nazwa;
     }
     else

@@ -4,7 +4,7 @@
 #include <payment.h>
 
 
-class Check : public payment
+class Check : public Payment
 {
     public:
         Check();

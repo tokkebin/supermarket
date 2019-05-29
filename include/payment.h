@@ -6,19 +6,22 @@
 #include <vector>
 #include "product.h"
 using namespace std;
-class payment
+class Payment
 {
     public:
-        void setPayment();
-        float getPayment();
+        void setPayment(double total);
+        double getPayment();
         vector<Product>* listProducts;
         virtual string getName()=0;
+        virtual void setNumber(int i)=0;
+        virtual int getNumber()=0;
 
 
-        payment();
-        virtual ~payment();
+        Payment();
+        virtual ~Payment();
 
     protected:
+        double price;
 
     private:
 };

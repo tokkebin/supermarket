@@ -22,3 +22,13 @@ string Invoice::getName()
 {
     return this->name;
 }
+
+void Invoice::setNumber(int i)
+{
+    this->number = i;
+}
+
+int Invoice::getNumber()
+{
+    return this->number;
+}

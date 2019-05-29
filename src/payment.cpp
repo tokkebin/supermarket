@@ -1,15 +1,24 @@
 #include "payment.h"
 
-payment::payment()
+Payment::Payment()
 {
     //ctor
 }
 
-payment::~payment()
+Payment::~Payment()
 {
 
 }
 
+void Payment::setPayment(double total)
+{
+    this->price = total;
+}
+
+double Payment::getPayment()
+{
+    return this->price;
+}
 /*payment* payment::choosePayment(payment* choose, typedef typ)
 {
     if(typeid(choose)==invoice) //chyba ze sprawdzenie w kasie

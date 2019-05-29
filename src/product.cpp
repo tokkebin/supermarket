@@ -17,4 +17,13 @@ double Product::getPrice()
     return this->price;
 }
 
+void Product::setValueVAT()
+{
+    this->valueVAT = (this->price)*(this->VAT)/((this->VAT)+100);
+}
+
+double Product::getValueVAT()
+{
+    return this->valueVAT;
+}
 //void product::
