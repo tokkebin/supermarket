@@ -14,13 +14,15 @@ class Client
         Client(int i);
         void setNumber(int i);
         int getNumber();
-        string askWorker(string what,Product* p,Worker* w);
-        double checkPrice(Product* p);
+        string askWorker(string what,Worker& w);
+        double checkPrice(Product& p);
         bool entrence(string inout);
         Product* choose();
-        void toQueue(Supermarket* market);
+        vector<cashRegister>::iterator toQueue(Supermarket* market);
         void toBasket(Product& pr);
         vector<Product> basket;
+        vector<productVAT23> basket23;
+        vector<productVAT8> basket8;
         ~Client();
 
     protected:

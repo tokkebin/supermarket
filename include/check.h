@@ -9,6 +9,8 @@ class Check : public Payment
     public:
         Check();
         string getName();
+        void setNumber(int i){};
+        int getNumber(){};
         ~Check();
 
     protected:

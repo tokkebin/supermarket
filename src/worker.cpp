@@ -34,22 +34,34 @@ bool Worker::getBusy()
 string Worker::answer(string question)
 {
     string answer;
+    if(question == "godziny otwarcia")
+    {
+        answer = "od 8 do 20";
+    }
+    else if(this->busy)
+    {
+        throw 0;
+    }
+    else
+        answer = "nie wiem";
+
+    return answer;
 
 }
 
-double Worker::answerPrice(Product* p)
+/*double Worker::answerPrice(Product* p)
 {
     return p->getPrice();
-}
+}*/
 
 int Worker::countProduct(vector<Product>* v)
 {
     return v->size();
 }
 
-void Worker::setOpen(cashRegister* cash)
+void Worker::setOpen(cashRegister& cash)
 {
-    cash->setOpen("open");
+    cash.setOpen("open");
 }
 
 void Worker::setClosed(cashRegister* cash)

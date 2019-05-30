@@ -25,9 +25,9 @@ class Worker
         void setBusy(bool i);
         bool getBusy();
         string answer(string question);
-        double answerPrice(Product* p); //zdefiniowac cialo funkcji
+        //double answerPrice(Product* p); //zdefiniowac cialo funkcji
         int countProduct(vector<Product>* v);
-        void setOpen(cashRegister* cash);
+        void setOpen(cashRegister& cash);
         void setClosed(cashRegister* cash);
         void closeMarket(Supermarket* market);
 

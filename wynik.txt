@@ -2,18 +2,31 @@ Symulacja supermarketu
 
 stworzono 10 kas
 stworzono 5 pracownikow
-
-Klient nr: 0 wszedl do sklepu
-
-klient wybral gazete
-klient wybral chleb
-
-Kasa nr: 0zostala otwarta przez pracownika nr: 9311272
+stworzono 10 jablek
+stworzono 10 ksiazek
+stworzono 10 butelek wody
+stworzono 10 bochenkow chleba
+stworzono 10 czekolad
+stworzono 10 bukietow kwiatow
+stworzono 10 gazet
 
 Klient nr: 1 wszedl do sklepu
 
-klient wybral wode klient wybral kwiaty
+Symulacja supermarketu
 
-Kasa nr: 1zostala otwarta przez pracownika nr: 9311272
+stworzono 10 kas
+stworzono 5 pracownikow
+stworzono 10 jablek
+stworzono 10 ksiazek
+stworzono 10 butelek wody
+stworzono 10 bochenkow chleba
+stworzono 10 czekolad
+stworzono 10 bukietow kwiatow
+stworzono 10 gazet
+
+Klient nr: 1 wszedl do sklepu
+
+Symulacja supermarketu
+
 Symulacja supermarketu
 

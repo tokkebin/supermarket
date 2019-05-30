@@ -5,6 +5,7 @@
 #include <vector>
 #include <chrono>
 #include <thread>
+#include <fstream>
 #include "check.h"
 #include "invoice.h"
 #include "client.h"
@@ -21,12 +22,12 @@ class cashRegister
         bool getOpen();
         double getPriceVAT();
         void countCost(double price);
-        void countVAT(Product& p);
+        void countVAT(double vat);
         double getTotal();
-        string createPayment(Payment& pay, Client& cl);//stworzymy potwierdzenie zaplaty o wybranej formie dla danego klienta
+        string createPayment(Payment& pay, Client* cl);//stworzymy potwierdzenie zaplaty o wybranej formie dla danego klienta
 
 
-        vector<Client>* cashQueue;
+        vector<Client> cashQueue;
         //void clientQueue(client* cl);
         int queueLength; //dlugosz kolejki do kasy
 

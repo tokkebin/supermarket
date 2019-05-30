@@ -43,3 +43,18 @@ string productVAT8::getName()
 {
     return this->name;
 }
+
+double productVAT8::getPrice()
+{
+    return this->price;
+}
+
+void productVAT8::setValueVAT()
+{
+    this->valueVAT = (this->price)*(this->VAT)/((this->VAT)+100);
+}
+
+double productVAT8::getValueVAT()
+{
+    return this->valueVAT;
+}

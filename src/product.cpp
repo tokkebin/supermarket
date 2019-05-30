@@ -26,4 +26,14 @@ double Product::getValueVAT()
 {
     return this->valueVAT;
 }
+
+string Product::getName()
+{
+    return this->name;
+}
+
+int Product::getNumber()
+{
+    return this->number;
+}
 //void product::

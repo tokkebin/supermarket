@@ -90,60 +90,61 @@
 	"supermarket.h"
 	"worker.h"
 
-1559088931 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\check.cpp
+1559162482 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\check.cpp
 	"check.h"
 
-1559126038 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\check.h
+1559185021 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\check.h
 	<payment.h>
 
-1559154305 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\payment.h
+1559186511 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\payment.h
 	<typeinfo>
 	<string>
 	<vector>
 	"product.h"
 
-1559131227 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\invoice.cpp
+1559187296 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\invoice.cpp
 	"invoice.h"
 
-1559131207 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\invoice.h
+1559187286 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\invoice.h
 	<payment.h>
 
-1559129035 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\payment.cpp
+1559162482 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\payment.cpp
 	"payment.h"
 
-1559129873 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\product.cpp
+1559177815 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\product.cpp
 	"product.h"
 
-1559132853 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\product.h
+1559178999 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\product.h
 	<string>
 
-1559086945 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\productvat23.cpp
+1559183379 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\productvat23.cpp
 	"productVAT23.h"
 
-1559047114 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\productvat23.h
+1559183296 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\productvat23.h
 	<product.h>
 
-1558993102 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\productvat8.cpp
+1559183397 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\productvat8.cpp
 	"productVAT8.h"
 
-1559047128 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\productvat8.h
+1559183292 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\productvat8.h
 	<cstdlib>
 	<product.h>
 
-1559154353 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\cashregister.cpp
+1559185630 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\cashregister.cpp
 	"cashRegister.h"
 
-1559154236 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\cashregister.h
+1559185637 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\cashregister.h
 	<iostream>
 	<string>
 	<vector>
 	<chrono>
 	<thread>
+	<fstream>
 	"check.h"
 	"invoice.h"
 	"client.h"
 
-1559154155 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\client.h
+1559189496 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\client.h
 	<string>
 	<vector>
 	"supermarket.h"
@@ -153,23 +154,23 @@
 	<vector>
 	<string>
 
-1559049480 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\worker.h
+1559187382 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\worker.h
 	<string>
 	<vector>
 	"product.h"
 	"productVAT23.h"
 	"productVAT8.h"
 
-1559049494 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\worker.cpp
+1559187805 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\worker.cpp
 	"worker.h"
 	"cashRegister.h"
 	"supermarket.h"
 
-1559154359 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\client.cpp
+1559172361 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\client.cpp
 	"client.h"
 	"cashRegister.h"
 
-1559162082 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\simulation.h
+1559189082 c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\include\simulation.h
 	<iostream>
 	<sstream>
 	<string>
@@ -179,7 +180,7 @@
 	<fstream>
 	"supermarket.h"
 
-1559070514 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\supermarket.cpp
+1559184859 source:c:\users\magdalena\documents\github\supermarket_cb\supermarket\supermarket\src\supermarket.cpp
 	"supermarket.h"
 	"cashRegister.h"
 

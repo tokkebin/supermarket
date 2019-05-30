@@ -56,44 +56,61 @@ double cashRegister::getTotal()
     return this->total;
 }
 
-void cashRegister::countVAT(Product& p)
+void cashRegister::countVAT(double vat)
 {
-    this->priceVAT = this->priceVAT + p.getValueVAT();
+    this->priceVAT = (this->priceVAT) + vat;
 }
 
 double cashRegister::getPriceVAT()
 {
     return this->priceVAT;
 }
-string cashRegister::createPayment(Payment& pay, Client& cl)
+string cashRegister::createPayment(Payment& pay, Client* cl)
 {
     //stworzymy potwierdzenie zaplaty o wybranej formie dla danego klienta
     //po kazdym wypisaniu akcji na konsole czekamy az uzytkownik przeczyta
-    pay.listProducts = (cl.basket);
-    vector<Product>::iterator it;
+    //(pay.listProducts) = (cl.basket);
+    vector<productVAT8>::iterator it8;
+    vector<productVAT23>::iterator it23;
     string nazwa;
 
-    nazwa = "\nKlient nr: " + to_string(cl.getNumber()) + "kupil:\n";
+    nazwa = "\nKlient nr: " + to_string(cl->getNumber()) + "kupil:\n";
     cout<<nazwa;
     this_thread::sleep_for(std::chrono::seconds(1));
     //wypisanie listy kupionych produktow i policzenie ceny
-    for(it=pay.listProducts.begin();it!= pay.listProducts.end();it++)
+    for(it8=cl->basket8.begin();it8!= cl->basket8.end();it8++)
     {
-        Product& temp = *it;
 
-        this->countCost(temp.getPrice());
+
+        this->countCost(it8->getPrice());
         //a tutaj liczymy w petli cene do zaplaty
         //oraz caly vat
-        this->countVAT(temp);
+        this->countVAT(it8->getValueVAT());
 
-        string text = temp.getName() + " nr: " + to_string(temp.getNumber());
+        string text = it8->getName() + " nr: " + to_string(it8->getNumber())+"\n";
         nazwa.append(text);
         cout<<text;
         this_thread::sleep_for(std::chrono::seconds(1));
 
     }
-    string nazwaAdd = "\nKlient nr " + to_string(cl.getNumber()) + " wybral " + pay.getName();
+    for(it23=cl->basket23.begin();it23!= cl->basket23.end();it23++)
+    {
+
+
+        this->countCost(it23->getPrice());
+        //a tutaj liczymy w petli cene do zaplaty
+        //oraz caly vat
+        this->countVAT(it23->getValueVAT());
+
+        string text = it23->getName() + " nr: " + to_string(it23->getNumber())+"\n";
+        nazwa.append(text);
+        cout<<text;
+        this_thread::sleep_for(std::chrono::seconds(1));
+
+    }
+    string nazwaAdd = "\nKlient nr " + to_string(cl->getNumber()) + " wybral " + pay.getName();
     nazwa.append(nazwaAdd);
+    cout<<nazwaAdd<<endl;
     this_thread::sleep_for(std::chrono::seconds(2));
 
     if(typeid(pay)==typeid(Invoice))

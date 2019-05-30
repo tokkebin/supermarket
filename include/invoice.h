@@ -17,6 +17,7 @@ class Invoice : public Payment
     protected:
 
     private:
+        double vat;
         string name = "FAKTURA";
         int number;
 };

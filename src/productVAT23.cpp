@@ -40,3 +40,18 @@ int productVAT23::getNumber()
 {
     return this->number;
 }
+
+double productVAT23::getPrice()
+{
+    return this->price;
+}
+
+void productVAT23::setValueVAT()
+{
+    this->valueVAT = (this->price)*(this->VAT)/((this->VAT)+100);
+}
+
+double productVAT23::getValueVAT()
+{
+    return this->valueVAT;
+}

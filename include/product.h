@@ -12,16 +12,19 @@ class Product
         double getPrice();
         void setValueVAT();
         double getValueVAT();
-        virtual string getName(){};
+        virtual string getName();
         virtual void setNumber(int i){};
-        virtual int getNumber(){};
+        int getNumber();
         virtual ~Product(){};
 
     protected:
         double valueVAT;
+        string name;
+        int number;
+        double price;
     private:
         int VAT;
-        double price;
+
 };
 
 #endif // PRODUCT_H

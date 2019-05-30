@@ -14,7 +14,9 @@ class productVAT23 : public Product
         void setNumber(int i);
         int getNumber();
         string getName();
-        //double getPrice();
+        double getPrice();
+        void setValueVAT();
+        double getValueVAT();
         ~productVAT23();
 
     protected:

@@ -33,20 +33,28 @@ bool Client::entrence(string inout)
         return false;
 }
 
-string Client::askWorker(string what,Product* p, Worker* w)
+string Client::askWorker(string what, Worker& w)
 {
-    if(what == "price")
-        return  to_string( w->answerPrice(p));
-    else
-        return w->answer(what);
+    string answer;
+    try
+    {
+        answer = w.answer(what);
+    }
+    catch(int i)
+    {
+        return "pracownik zajety";
+    }
+
+    return answer;
+
 }
 
-void Client::toQueue(Supermarket* market)
+vector<cashRegister>::iterator Client::toQueue(Supermarket* market)
 {
     int smallest = 100;
     cashRegister smallestQueue;
 
-    vector<cashRegister>::iterator it;
+    vector<cashRegister>::iterator it,small;
 
     for(it=market->cashList.begin();it!=market->cashList.end();it++)
     {
@@ -58,20 +66,25 @@ void Client::toQueue(Supermarket* market)
             {
                 smallest = temp.queueLength;
                 smallestQueue = *it;
+                small = it;
             }
 
         }
     }
     //po znalezieniu stajemy w kolejce
 
-    smallestQueue.cashQueue->push_back(*this);
+    smallestQueue.cashQueue.push_back(*this);
+    //market->cashList.erase(small);
+    *it = smallestQueue;
+    //market->cashList.push_back(smallestQueue);
 
+    return small;
 
 }
 
-double Client::checkPrice(Product* p)
+double Client::checkPrice(Product& p)
 {
-    return p->getPrice();
+    return p.getPrice();
 }
 
 void Client::toBasket(Product& p)

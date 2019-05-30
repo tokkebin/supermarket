@@ -13,9 +13,9 @@ Invoice::~Invoice()
 double Invoice::getVAT()
 {
     //liczymy vat dla calej listy produktow
-    double vat;
-    this->listProducts;
-    return vat;
+
+
+    return this->vat;
 }
 
 string Invoice::getName()

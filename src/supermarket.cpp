@@ -7,6 +7,7 @@ Supermarket::Supermarket()
 
 Supermarket::~Supermarket()
 {
+    delete this;
     //dtor
 }
 
@@ -61,10 +62,13 @@ void Supermarket::createBottles(int quantity)
     for(int i=1;i<=quantity;i++)
     {
         productVAT8* bottleofWater = new productVAT8(i, "butelka wody", 3.5 );
+        bottleofWater->setValueVAT();
         this->bottlesofWater.push_back(*bottleofWater);
         //tworzymy butelke wody i dodajemy do vectora
     }
-    cout<<"stworzono "<<quantity<<" butelek"<<endl;
+    string text = "stworzono " + to_string(quantity) + " butelek wody\n";
+    cout<<text;
+    this->akcja.append(text);
 }
 
 void Supermarket::createApples(int quantity)
@@ -72,10 +76,13 @@ void Supermarket::createApples(int quantity)
     for(int i=1;i<=quantity;i++)
     {
         productVAT8* apple = new productVAT8(i, "jablko", 0.5);
+        apple->setValueVAT();
         this->apples.push_back(*apple);
         //tworzymy jablko i dodajemy do vectora
     }
-    cout<<"stworzono "<<quantity<<" jablek"<<endl;
+    string text = "stworzono " + to_string(quantity) + " jablek\n";
+    cout<<text;
+    this->akcja.append(text);
 }
 
 void Supermarket::createFlowers(int quantity)
@@ -83,10 +90,13 @@ void Supermarket::createFlowers(int quantity)
     for(int i=1; i<=quantity; i++)
     {
         productVAT8* flower = new productVAT8(i, "bukiet kwiatow", 5.0);
+        flower->setValueVAT();
         this->flowers.push_back(*flower);
         //tworzymy bukiet kwiatow i dodajemy do vectora
     }
-    cout<<"stworzono "<<quantity<<" bukietow kwiatow"<<endl;
+    string text = "stworzono " + to_string(quantity) + " bukietow kwiatow\n";
+    cout<<text;
+    this->akcja.append(text);
 }
 
 void Supermarket::createBooks(int quantity)
@@ -94,10 +104,13 @@ void Supermarket::createBooks(int quantity)
     for(int i=1; i<=quantity; i++)
     {
         productVAT23* book = new productVAT23(i, "ksiazka", 0);
+        book->setValueVAT();
         this->books.push_back(*book);
         //tworzymy ksiazke i dodajemy do vectora
     }
-    cout<<"stworzono "<<quantity<<" ksiazek"<<endl;
+    string text = "stworzono " + to_string(quantity) + " ksiazek\n";
+    cout<<text;
+    this->akcja.append(text);
 }
 
 void Supermarket::createBreads(int quantity)
@@ -105,10 +118,13 @@ void Supermarket::createBreads(int quantity)
     for(int i=1; i<=quantity; i++)
     {
         productVAT23* br = new productVAT23(i, "bochenek chleba", 2.5);
+        br->setValueVAT();
         this->bread.push_back(*br);
         //tworzymy bochenek chleba i dodajemy do vectora
     }
-    cout<<"stworzono "<<quantity<<" bochenkow"<<endl;
+    string text = "stworzono " + to_string(quantity) + " bochenkow chleba\n";
+    cout<<text;
+    this->akcja.append(text);
 }
 
 void Supermarket::createChocolates(int quantity)
@@ -116,10 +132,13 @@ void Supermarket::createChocolates(int quantity)
     for(int i=1; i<=quantity; i++)
     {
         productVAT23* choco = new productVAT23(i, "tabliczka czekolady", 3.5);
+        choco->setValueVAT();
         this->chocolate.push_back(*choco);
         //tworzymy czekolade i dodajemy do vectora
     }
-    cout<<"stworzono "<<quantity<<" czekolad"<<endl;
+    string text = "stworzono " + to_string(quantity) + " czekolad\n";
+    cout<<text;
+    this->akcja.append(text);
 }
 
 void Supermarket::createNewspapers(int quantity)
@@ -127,9 +146,12 @@ void Supermarket::createNewspapers(int quantity)
     for(int i=1; i<=quantity; i++)
     {
         productVAT23* news = new productVAT23(i, "gazeta", 4.9);
+        news->setValueVAT();
         this->newspapers.push_back(*news);
     }
-    cout<<"stworzono "<<quantity<<" gazet"<<endl;
+    string text = "stworzono " + to_string(quantity) + " gazet\n";
+    cout<<text;
+    this->akcja.append(text);
 }
 
 bool Supermarket::entrance()
