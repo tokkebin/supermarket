@@ -6,6 +6,11 @@ Worker::Worker()
     //ctor
 }
 
+Worker::Worker(int a)
+{
+    this->set_number(a);
+}
+
 Worker::~Worker()
 {
     //dtor

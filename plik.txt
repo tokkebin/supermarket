@@ -1,2 +1,3 @@
 Kasy: 5
 Pracownicy: 10
+Iteracje: 2

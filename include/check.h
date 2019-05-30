@@ -1,7 +1,7 @@
 #ifndef CHECK_H
 #define CHECK_H
 
-#include <payment.h>
+#include "payment.h"
 
 
 class Check : public Payment

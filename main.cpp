@@ -20,7 +20,7 @@ using namespace std;
 int main()
 {
     string text;
-    string all[2][2];
+    string all[3][2];
     ifstream plik("plik.txt");
 
     //plik.open("plik", ios::in);
@@ -47,8 +47,14 @@ int main()
 
     int m = stoi(all[0][1]); //liczba kas
     int n = stoi(all[1][1]); //liczba pracownikow
+    int it = stoi(all[2][1]); //liczba iteracji
 
-    simulation(2,n,m,1,1,1);
+    if(n<it)
+    {
+        cout<<"liczba iteracji nie moze byc wieksza od liczby pracownikow"<<endl;
+    }
+
+    simulation(it,n,m);
 
     return 0;
 }

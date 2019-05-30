@@ -1,7 +1,7 @@
 #ifndef PRODUCTVAT8_H
 #define PRODUCTVAT8_H
 #include <cstdlib>
-#include <product.h>
+#include "product.h"
 
 using namespace std;
 

@@ -3,7 +3,22 @@
 
 #include <string>
 using namespace std;
-class Product
+
+class ProductInter
+{
+    public:
+        virtual void setPrice()=0;
+        virtual void setName(string n)=0;
+        virtual double getPrice()=0;
+        virtual void setValueVAT()=0;
+        virtual double getValueVAT()=0;
+        virtual string getName()=0;
+        virtual void setNumber(int i)=0;
+        virtual int getNumber()=0;
+        //virtual ~ProductInter()=0;
+};
+
+class Product: virtual ProductInter
 {
     public:
         Product();

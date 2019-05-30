@@ -47,6 +47,7 @@
 		<Unit filename="include/supermarket.h" />
 		<Unit filename="include/worker.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="makefile" />
 		<Unit filename="src/cashRegister.cpp" />
 		<Unit filename="src/check.cpp" />
 		<Unit filename="src/client.cpp" />

@@ -28,7 +28,7 @@ string clientAsk()
 
 
 
-void simulation(int iter, int n, int m, int water, int apples, int books)
+void simulation(int iter, int n, int m)
 {
     fstream plik;
     plik.open("wynik.txt",ios::out | ios::app);
@@ -207,8 +207,7 @@ void simulation(int iter, int n, int m, int water, int apples, int books)
         wynik.clear();
 
 
-        vector<productVAT8>::iterator costam = client->basket8.begin();
-        //cout<<costam->getPrice()<<" dupa "<<costam->getName()<<endl;
+
         this_thread::sleep_for(std::chrono::seconds(2));
         //wybor drugiego produktu
         int modulo2 = rand();
@@ -220,13 +219,7 @@ void simulation(int iter, int n, int m, int water, int apples, int books)
         uniform_int_distribution<int> uniform_dist2(first2, last2);
         int choose2 =  uniform_dist2(generator2);
         choose2 = (choose2%6)+1;
-        //cout<<choose<<"randomowo"<<endl;
 
-        //vector<productVAT8>::iterator it8;
-        //vector<productVAT23>::iterator it23;
-        //productVAT23 temp23;
-        //productVAT8 temp8;
-        //double cena;
         switch(choose2)
         {
         case 1:
@@ -350,11 +343,12 @@ void simulation(int iter, int n, int m, int water, int apples, int books)
         this_thread::sleep_for(std::chrono::seconds(4));
 
         //zapytanie do pracownika
-        vector<Worker>::iterator it;
-        it = market->workerList.end();
-        string odp = client->askWorker("godziny otwarcia",*it);
+        vector<Worker>::iterator it, itwor;
+        itwor = market->workerList.end();
+        itwor--;
+        string odp = client->askWorker("godziny otwarcia",*itwor);
 
-        market->akcja = "Klient nr: "+to_string(client->getNumber())+" pyta pracownika nr: "+to_string(it->get_number())+" o godziny otwarcia\n";
+        market->akcja = "Klient nr: "+to_string(client->getNumber())+" pyta pracownika nr: "+to_string(itwor->get_number())+" o godziny otwarcia\n";
         cout<<market->akcja;
         plik<<market->akcja;
         market->akcja.clear();
@@ -371,21 +365,29 @@ void simulation(int iter, int n, int m, int water, int apples, int books)
 
         it = market->workerList.begin();
         //Worker worker = *it;
+
+        while(it->getBusy())
+            it++;
+
         it->setBusy(true);
 
         vector<cashRegister>::iterator iterCash = market->cashList.begin();
         //cashRegister kasa = *iterCash;
         //market->cashList.erase(iterCash);
+
+        while(iterCash->getOpen())
+            iterCash++;
+
         it->setOpen(*iterCash);
         //market->cashList.push_back(kasa);
 
-        market->akcja = "\nKasa nr: "+to_string(iterCash->getNumber())+"zostala otwarta";
+        market->akcja = "\nKasa nr: "+to_string(iterCash->getNumber())+" zostala otwarta";
         market->akcja.append(" przez pracownika nr: "+to_string(it->get_number())+"\n");
         plik<<market->akcja;
         cout<<market->akcja;
         market->akcja.clear();
 
-        market->workerList.erase(it); //pracownik usuniety z dostepnych
+        //market->workerList.erase(it); //pracownik usuniety z dostepnych
 
         this_thread::sleep_for(std::chrono::seconds(2));
 
@@ -395,7 +397,7 @@ void simulation(int iter, int n, int m, int water, int apples, int books)
 
         //cashRegister kasa1 = *iterCash;
 
-        market->akcja = "Klient nr: "+to_string(client->getNumber())+" wybral kase nr: "+to_string(iterCash->getNumber())+"\n";
+        market->akcja = "Klient nr: "+to_string(client->getNumber())+"  wybral kase nr: "+to_string(iterCash->getNumber())+"\n";
         cout<<market->akcja;
         plik<<market->akcja;
         market->akcja.clear();
@@ -406,12 +408,13 @@ void simulation(int iter, int n, int m, int water, int apples, int books)
         if(i%2)
         {
             Invoice inv;
+            inv.setNumber(1);
             //Client cl = *client;
             try
             {
                 market->akcja = iterCash->createPayment(inv,client);
             }
-            catch(...)
+            catch(int i)
             {
                 cout<<"Zly typ potwierdzenia zaplaty "<<endl;
             }
@@ -424,7 +427,7 @@ void simulation(int iter, int n, int m, int water, int apples, int books)
             {
                 market->akcja = iterCash->createPayment(che,client);
             }
-            catch(...)
+            catch(int i)
             {
                 cout<<"Zly typ potwierdzenia zaplaty "<<endl;
             }
@@ -437,17 +440,20 @@ void simulation(int iter, int n, int m, int water, int apples, int books)
         this_thread::sleep_for(std::chrono::seconds(2));
 
         //opuszczanie kolejki w kasie
-        iterCash->cashQueue.pop_back();
-        market->akcja = "Klient nr: "+to_string(client->getNumber())+"opuscil kase nr: "+to_string(iterCash->getNumber())+"\n";
+        //iterCash->cashQueue.pop_back();
+        market->akcja = "Klient nr: "+to_string(client->getNumber())+" opuscil kase nr: "+to_string(iterCash->getNumber())+"\n";
         cout<<market->akcja;
         plik<<market->akcja;
+        market->akcja.clear();
 
-        this_thread::sleep_for(std::chrono::seconds(1));
+        //this_thread::sleep_for(std::chrono::seconds(1));
 
 
     }
 
     market->close();
+
+
 
 }
 

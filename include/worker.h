@@ -19,6 +19,7 @@ class Worker
 {
     public:
         Worker();
+        Worker(int a);
         void set_number(int a);
         int get_number();
         virtual ~Worker();

@@ -130,7 +130,7 @@ string cashRegister::createPayment(Payment& pay, Client* cl)
         return nazwa;
     }
     else
-        throw "ZLY TYP";
+        throw 0;
 
 
 }

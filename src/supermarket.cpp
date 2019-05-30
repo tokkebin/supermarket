@@ -7,7 +7,15 @@ Supermarket::Supermarket()
 
 Supermarket::~Supermarket()
 {
-    delete this;
+    delete &cashList;
+    delete &workerList;
+    delete &bottlesofWater;
+    delete &apples;
+    delete &flowers;
+    delete &chocolate;
+    delete &bread;
+    delete &newspapers;
+    delete &books;
     //dtor
 }
 
@@ -25,6 +33,7 @@ Supermarket::Supermarket(int n,int m)
 
     enter = true;
     cout<<"Otwarto sklep"<<endl;
+    this->akcja.append("Otwarto sklep\n");
 }
 
 void Supermarket::createCash(int n)
@@ -36,7 +45,7 @@ void Supermarket::createCash(int n)
         //tworzymy nowa kase i dodajemy do vectora
     }
     string text = "stworzono " + to_string(n) + " kas\n";
-    cout<<text;
+    //cout<<text;
     this->akcja.append(text);
 }
 
@@ -45,15 +54,15 @@ void Supermarket::createWorker(int m)
 {
     for(int i=0;i<m;i++)
     {
-        Worker* wor = new Worker();
-        wor->set_number(i+1);
+        Worker* wor = new Worker(i+1);
+        //wor->set_number(i+1);
         this->workerList.push_back(*wor);
         //tworzymy nowego pracownika i dodajemy do wektora
     }
 
 
     string text = "stworzono " + to_string(m) + " pracownikow\n";
-    cout<<text;
+    //cout<<text;
     this->akcja.append(text);
 }
 
@@ -67,7 +76,7 @@ void Supermarket::createBottles(int quantity)
         //tworzymy butelke wody i dodajemy do vectora
     }
     string text = "stworzono " + to_string(quantity) + " butelek wody\n";
-    cout<<text;
+    //cout<<text;
     this->akcja.append(text);
 }
 
@@ -81,7 +90,7 @@ void Supermarket::createApples(int quantity)
         //tworzymy jablko i dodajemy do vectora
     }
     string text = "stworzono " + to_string(quantity) + " jablek\n";
-    cout<<text;
+    //cout<<text;
     this->akcja.append(text);
 }
 
@@ -95,7 +104,7 @@ void Supermarket::createFlowers(int quantity)
         //tworzymy bukiet kwiatow i dodajemy do vectora
     }
     string text = "stworzono " + to_string(quantity) + " bukietow kwiatow\n";
-    cout<<text;
+    //cout<<text;
     this->akcja.append(text);
 }
 
@@ -109,7 +118,7 @@ void Supermarket::createBooks(int quantity)
         //tworzymy ksiazke i dodajemy do vectora
     }
     string text = "stworzono " + to_string(quantity) + " ksiazek\n";
-    cout<<text;
+    //cout<<text;
     this->akcja.append(text);
 }
 
@@ -123,7 +132,7 @@ void Supermarket::createBreads(int quantity)
         //tworzymy bochenek chleba i dodajemy do vectora
     }
     string text = "stworzono " + to_string(quantity) + " bochenkow chleba\n";
-    cout<<text;
+    //cout<<text;
     this->akcja.append(text);
 }
 
@@ -137,7 +146,7 @@ void Supermarket::createChocolates(int quantity)
         //tworzymy czekolade i dodajemy do vectora
     }
     string text = "stworzono " + to_string(quantity) + " czekolad\n";
-    cout<<text;
+    //cout<<text;
     this->akcja.append(text);
 }
 
@@ -150,7 +159,7 @@ void Supermarket::createNewspapers(int quantity)
         this->newspapers.push_back(*news);
     }
     string text = "stworzono " + to_string(quantity) + " gazet\n";
-    cout<<text;
+    //cout<<text;
     this->akcja.append(text);
 }
 

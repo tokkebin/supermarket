@@ -1,7 +1,7 @@
 #ifndef PRODUCTVAT23_H
 #define PRODUCTVAT23_H
 
-#include <product.h>
+#include "product.h"
 
 
 class productVAT23 : public Product

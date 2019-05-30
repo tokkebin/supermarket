@@ -1,7 +1,7 @@
 #ifndef INVOICE_H
 #define INVOICE_H
 
-#include <payment.h>
+#include "payment.h"
 
 
 class Invoice : public Payment

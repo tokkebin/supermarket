@@ -9,6 +9,7 @@ stworzono 10 bochenkow chleba
 stworzono 10 czekolad
 stworzono 10 bukietow kwiatow
 stworzono 10 gazet
+Otwarto sklep
 
 Klient nr: 1 wszedl do sklepu
 
@@ -23,10 +24,176 @@ stworzono 10 bochenkow chleba
 stworzono 10 czekolad
 stworzono 10 bukietow kwiatow
 stworzono 10 gazet
+Otwarto sklep
+
+Klient nr: 1 wszedl do sklepu
+
+klient wybral gazete
+nr: 1
+klient wybral chleb
+nr: 1
+Klient nr: 1sprawdza cene czekolady nr: 1
+ktora wynosi: 5.000000
+Klient nr: 1 pyta pracownika nr: 5 o godziny otwarcia
+Odpowiedz pracownika: od 8 do 20
+
+Kasa nr: 1zostala otwarta przez pracownika nr: 1
+Klient nr: 1 wybral kase nr: 1
+
+Klient nr: 1kupil:
+gazeta nr: 1
+bochenek chleba nr: 1
+
+Klient nr 1 wybral PARAGON
+Do zaplaty: 7.400000
+Klient nr: 1opuscil kase nr: 1
+
+Klient nr: 2 wszedl do sklepu
+
+klient wybral wode nr: 1
+Klient nr: 2sprawdza cene czekolady nr: 1
+ktora wynosi: 3.500000
+klient wybral kwiaty
+nr: 1
+Klient nr: 2 pyta pracownika nr: 5 o godziny otwarcia
+Odpowiedz pracownika: od 8 do 20
+
+Kasa nr: 1zostala otwarta przez pracownika nr: 2
+Klient nr: 2 wybral kase nr: 1
+
+Klient nr: 2kupil:
+butelka wody nr: 1
+bukiet kwiatow nr: 1
+
+Klient nr 2 wybral FAKTURA nr: 0
+Do zaplaty: 15.900000 w tym 2.013369 VAT
+Klient nr: 2opuscil kase nr: 1
+Symulacja supermarketu
+
+Symulacja supermarketu
+
+stworzono 10 kas
+stworzono 5 pracownikow
+stworzono 10 jablek
+stworzono 10 ksiazek
+stworzono 10 butelek wody
+stworzono 10 bochenkow chleba
+stworzono 10 czekolad
+stworzono 10 bukietow kwiatow
+stworzono 10 gazet
+Otwarto sklep
+
+Klient nr: 1 wszedl do sklepu
+
+klient wybral gazete
+nr: 1
+klient wybral chleb
+nr: 1
+Klient nr: 1sprawdza cene czekolady nr: 1
+ktora wynosi: 5.000000
+Klient nr: 1 pyta pracownika nr: 5 o godziny otwarcia
+Odpowiedz pracownika: od 8 do 20
+
+Kasa nr: 1 zostala otwarta przez pracownika nr: 1
+Klient nr: 1 wybral kase nr: 1
+
+Klient nr: 1kupil:
+gazeta nr: 1
+bochenek chleba nr: 1
+
+Klient nr 1 wybral PARAGON
+Do zaplaty: 7.400000
+Klient nr: 1opuscil kase nr: 1
+
+Klient nr: 2 wszedl do sklepu
+
+klient wybral wode nr: 1
+Klient nr: 2sprawdza cene czekolady nr: 1
+ktora wynosi: 3.500000
+klient wybral kwiaty
+nr: 1
+Klient nr: 2 pyta pracownika nr: 5 o godziny otwarcia
+Odpowiedz pracownika: od 8 do 20
+
+Kasa nr: 2 zostala otwarta przez pracownika nr: 1
+Klient nr: 2 wybral kase nr: 1
+
+Klient nr: 2kupil:
+butelka wody nr: 1
+bukiet kwiatow nr: 1
+
+Klient nr 2 wybral FAKTURA nr: 1
+Do zaplaty: 15.900000 w tym 2.013369 VAT
+Klient nr: 2opuscil kase nr: 1
+Symulacja supermarketu
+
+stworzono 10 kas
+stworzono 5 pracownikow
+stworzono 10 jablek
+stworzono 10 ksiazek
+stworzono 10 butelek wody
+stworzono 10 bochenkow chleba
+stworzono 10 czekolad
+stworzono 10 bukietow kwiatow
+stworzono 10 gazet
+Otwarto sklep
 
 Klient nr: 1 wszedl do sklepu
 
 Symulacja supermarketu
 
+stworzono 10 kas
+stworzono 5 pracownikow
+stworzono 10 jablek
+stworzono 10 ksiazek
+stworzono 10 butelek wody
+stworzono 10 bochenkow chleba
+stworzono 10 czekolad
+stworzono 10 bukietow kwiatow
+stworzono 10 gazet
+Otwarto sklep
+
+Klient nr: 1 wszedl do sklepu
+
+klient wybral gazete
+nr: 1
+klient wybral chleb
+nr: 1
+Klient nr: 1sprawdza cene czekolady nr: 1
+ktora wynosi: 5.000000
+Klient nr: 1 pyta pracownika nr: 5 o godziny otwarcia
+Odpowiedz pracownika: od 8 do 20
+
+Kasa nr: 1 zostala otwarta przez pracownika nr: 1
+Klient nr: 1  wybral kase nr: 1
+
+Klient nr: 1kupil:
+gazeta nr: 1
+bochenek chleba nr: 1
+
+Klient nr 1 wybral PARAGON
+Do zaplaty: 7.400000
+Klient nr: 1 opuscil kase nr: 1
+
+Klient nr: 2 wszedl do sklepu
+
+klient wybral wode nr: 1
+Klient nr: 2sprawdza cene czekolady nr: 1
+ktora wynosi: 3.500000
+klient wybral kwiaty
+nr: 1
+Klient nr: 2 pyta pracownika nr: 5 o godziny otwarcia
+Odpowiedz pracownika: od 8 do 20
+
+Kasa nr: 2 zostala otwarta przez pracownika nr: 1
+Klient nr: 2  wybral kase nr: 1
+
+Klient nr: 2kupil:
+butelka wody nr: 1
+bukiet kwiatow nr: 1
+
+Klient nr 2 wybral FAKTURA nr: 1
+Do zaplaty: 15.900000 w tym 2.013369 VAT
+Klient nr: 2 opuscil kase nr: 1
 Symulacja supermarketu
 
